@@ -21,7 +21,7 @@ with open('cherepistina_comments.csv', 'w', encoding='utf-8', newline='') as fil
                 if 'post_id' in comment:
                     writer.writerow((comment['id'], comment['post_id'], comment['from_id'], comment['text']))
                 else:
-                    writer.writerow((comment['id'], ' ', comment['from_id'], 'Комментарий удален'))
+                    writer.writerow((comment['id'], post['id'], comment['from_id'], 'Комментарий удален'))
 
         offset += count
         time.sleep(1)
